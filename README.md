@@ -1,3 +1,5 @@
+# openToMoreInfo
+
 With some additional components, it is possible to have users click on the "Update Device" button in Nudge and be taken directly to the "More Info" list of available minor updates to apply.
 
 ![Example of System Preferences/Software Update/More Info window](https://support.forgetcomputers.com/hc/article_attachments/4415135648013/bigSur_MoreInfo.png)
