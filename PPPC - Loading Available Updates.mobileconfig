@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadDescription</key>
+			<string>Grants Accessibility and Apple Events permissions for the Loading Available Updates script</string>
+			<key>PayloadDisplayName</key>
+			<string>PPPC - Loading Available Updates</string>
+			<key>PayloadIdentifier</key>
+			<string>759F9A71-7FBB-47F2-BDE6-0B7CF10C8853</string>
+			<key>PayloadOrganization</key>
+			<string>Ntiva, Inc.</string>
+			<key>PayloadType</key>
+			<string>com.apple.TCC.configuration-profile-policy</string>
+			<key>PayloadUUID</key>
+			<string>870271AC-7296-48AD-9D31-5D1E4424EB53</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>Services</key>
+			<dict>
+				<key>Accessibility</key>
+				<array>
+					<dict>
+						<key>Allowed</key>
+						<true/>
+						<key>CodeRequirement</key>
+						<string>identifier "com.apple.ScriptEditor.id.Loading-Available-Updates" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Ross Matsuda (6Y64CNQJ72)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+						<key>Comment</key>
+						<string></string>
+						<key>Identifier</key>
+						<string>com.apple.ScriptEditor.id.Loading-Available-Updates</string>
+						<key>IdentifierType</key>
+						<string>bundleID</string>
+					</dict>
+				</array>
+				<key>AppleEvents</key>
+				<array>
+					<dict>
+						<key>AEReceiverCodeRequirement</key>
+						<string>identifier "com.apple.systempreferences" and anchor apple</string>
+						<key>AEReceiverIdentifier</key>
+						<string>com.apple.systempreferences</string>
+						<key>AEReceiverIdentifierType</key>
+						<string>bundleID</string>
+						<key>Allowed</key>
+						<true/>
+						<key>CodeRequirement</key>
+						<string>identifier "com.apple.ScriptEditor.id.Loading-Available-Updates" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Ross Matsuda (6Y64CNQJ72)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+						<key>Comment</key>
+						<string></string>
+						<key>Identifier</key>
+						<string>com.apple.ScriptEditor.id.Loading-Available-Updates</string>
+						<key>IdentifierType</key>
+						<string>bundleID</string>
+					</dict>
+					<dict>
+						<key>AEReceiverCodeRequirement</key>
+						<string>identifier "com.apple.systemevents" and anchor apple</string>
+						<key>AEReceiverIdentifier</key>
+						<string>com.apple.systemevents</string>
+						<key>AEReceiverIdentifierType</key>
+						<string>bundleID</string>
+						<key>Allowed</key>
+						<true/>
+						<key>CodeRequirement</key>
+						<string>identifier "com.apple.ScriptEditor.id.Loading-Available-Updates" and anchor apple generic and certificate leaf[subject.CN] = "Apple Development: Ross Matsuda (6Y64CNQJ72)" and certificate 1[field.1.2.840.113635.100.6.2.1] /* exists */</string>
+						<key>Comment</key>
+						<string></string>
+						<key>Identifier</key>
+						<string>com.apple.ScriptEditor.id.Loading-Available-Updates</string>
+						<key>IdentifierType</key>
+						<string>bundleID</string>
+					</dict>
+				</array>
+			</dict>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Grants Accessibility and Apple Events permissions for the Loading Available Updates script</string>
+	<key>PayloadDisplayName</key>
+	<string>PPPC - Loading Available Updates</string>
+	<key>PayloadIdentifier</key>
+	<string>759F9A71-7FBB-47F2-BDE6-0B7CF10C8853</string>
+	<key>PayloadOrganization</key>
+	<string>Ntiva, Inc.</string>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>0C132EC3-AD47-4FC6-BB43-86385A2D4440</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
