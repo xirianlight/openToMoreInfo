@@ -3,9 +3,17 @@ tell application "System Preferences"
 end tell
 
 tell application "System Events"
-	repeat while not (exists window 1 of process "System Preferences")
-		delay 0.25
+	repeat 60 times
+		if exists (window 1 of process "System Preferences") then
+			exit repeat
+		else
+			delay 1
+		end if
 	end repeat
+	
+	if not (exists (window 1 of process "System Preferences")) then
+		return
+	end if
 	
 	tell application "System Preferences"
 		set the current pane to pane id "com.apple.preferences.softwareupdate"
