@@ -79,8 +79,6 @@ Once this is complete, you can further update your Nudge preferences to test and
 
 The script as published will time out and terminate after a maximum of 90 seconds has elapsed.
 
-The script does not include a time out when attempting to load the System Preferences app - it will continue trying to load the app until successful.
-
 Implementing the actionButtonPath key may cause you trouble if you normally use Nudge for major OS upgrades
 
 If the PPPC is not present on a target workstation and you run this, the user will be hit with multiple PPPC prompts and the script will fail
