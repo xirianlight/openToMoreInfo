@@ -2,7 +2,7 @@
 
 With some additional components, it is possible to have users click on the "Update Device" button in Nudge and be taken directly to the "More Info" list of available minor updates to apply.
 
-![Example of System Preferences/Software Update/More Info window](https://support.forgetcomputers.com/hc/article_attachments/4415135648013/bigSur_MoreInfo.png)
+![Example of System Preferences/Software Update/More Info window](https://support.ntiva.com/hc/article_attachments/4415135648013/bigSur_MoreInfo.png)
 
 ## WHY
 Many users in our environment complain of confusion when running Nudge, because of Apple's placement of macOS upgrade banners. Instructing users to look for a smaller "More Info" button, of which there can be two thanks to the upgrade banner, is cumbersome. We've included screenshots to help guide users, but it would be much more convenient to bypass the first page altogether and have the Nudge button take users as far as possible to minimize mistakes and support desk tickets.
