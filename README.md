@@ -12,10 +12,12 @@ At the moment, this workflow only works in Nudge Swift, as I have not yet been a
 
 ## VERSIONS
 Loading Available Updates.scpt
+
 • Original build
 • Opens the Systems Preferences app, clicks "More Info"
 
 Loading Available Updates_v2.scpt
+
 • First revision
 • Opens the System Preferences app, clicks "More Info", then "Install", then approves the EULA prompt
 • This represents a true "one click" workflow from Nudge, but may not be appropriate for all environments
