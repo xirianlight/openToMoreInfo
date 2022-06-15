@@ -11,16 +11,19 @@ Many users in our environment complain of confusion when running Nudge, because 
 At the moment, this workflow only works in Nudge Swift, as I have not yet been able to find a way to get Nudge Python to invoke the launcher app. The AppleScript logic itself is tested in 10.15.7, so this may eventually be supported.
 
 ## VERSIONS
-Loading Available Updates.scpt
+**Loading Available Updates.scpt**
 
-• Original build
-• Opens the Systems Preferences app, clicks "More Info"
+  • Original build
 
-Loading Available Updates_v2.scpt
+  • Opens the Systems Preferences app, clicks "More Info"
 
-• First revision
-• Opens the System Preferences app, clicks "More Info", then "Install", then approves the EULA prompt
-• This represents a true "one click" workflow from Nudge, but may not be appropriate for all environments
+**Loading Available Updates_v2.scpt**
+
+  • First revision
+  
+  • Opens the System Preferences app, clicks "More Info", then "Install", then approves the EULA prompt
+  
+  • This represents a true "one click" workflow from Nudge, but may not be appropriate for all environments
 
 ## COMPONENTS
 In order to make this function, a few items need to be in place:
