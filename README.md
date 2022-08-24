@@ -1,6 +1,6 @@
 # openToMoreInfo
 
-With some additional components, it is possible to have users click on the "Update Device" button in Nudge and be taken directly to the "More Info" list of available minor updates to apply.
+With some additional components, it is possible to have users click on the "Update Device" button in Nudge and be taken directly to the "More Info" list of available minor updates to apply. In the 1.1 release, this app will also click through all resulting windows/popups so no further clicking should be required by the user to get their update running (except for Apple silicon Macs which will prompt for a volume owner password to continue).
 
 ![Example of System Preferences/Software Update/More Info window](https://support.ntiva.com/hc/article_attachments/4415135648013/bigSur_MoreInfo.png)
 
@@ -11,6 +11,9 @@ Many users in our environment complain of confusion when running Nudge, because 
 At the moment, this workflow only works in Nudge Swift, as I have not yet been able to find a way to get Nudge Python to invoke the launcher app. The AppleScript logic itself is tested in 10.15.7, so this may eventually be supported.
 
 ## VERSIONS
+
+These are temporarily out of date and do not reflect macOS Ventura compatibility. They will be updated at some point.
+
 **Loading Available Updates.scpt**
 
   • Original build
