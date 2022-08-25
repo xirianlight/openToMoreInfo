@@ -12,17 +12,16 @@ At the moment, this workflow only works in Nudge Swift, as I have not yet been a
 
 ## VERSIONS
 
-These are temporarily out of date and do not reflect macOS Ventura compatibility. They will be updated at some point.
-
 **Loading Available Updates.scpt**
 
   • Original build
 
   • Opens the Systems Preferences app, clicks "More Info"
+  
+  • Temporarily out of date and does not reflect macOS Ventura compatibility. This will be updated at some point.
+
 
 **Loading Available Updates_v2.scpt**
-
-  • First revision
   
   • Opens the System Preferences app, clicks "More Info", then "Install", then approves the EULA prompt
   
