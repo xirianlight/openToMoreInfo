@@ -1,6 +1,6 @@
 # openToMoreInfo
 
-With some additional components, it is possible to have users click on the "Update Device" button in Nudge and be taken directly to the "More Info" list of available minor updates to apply. In the 1.1 release, this app will also click through all resulting windows/popups so no further clicking should be required by the user to get their update running (except for Apple silicon Macs which will prompt for a volume owner password to continue).
+With some additional components, it is possible to have users click on the "Update Device" button in Nudge and be taken directly to the "More Info" list of available minor updates to apply. Optionally, you can also click through all resulting windows/popups so no further user clicking should be required to get their update running (except for Apple silicon Macs which will prompt for a volume owner password to continue).
 
 ![Example of System Preferences/Software Update/More Info window](https://support.ntiva.com/hc/article_attachments/4415135648013/bigSur_MoreInfo.png)
 
@@ -8,22 +8,22 @@ With some additional components, it is possible to have users click on the "Upda
 Many users in our environment complain of confusion when running Nudge, because of Apple's placement of macOS upgrade banners. Instructing users to look for a smaller "More Info" button, of which there can be two thanks to the upgrade banner, is cumbersome. We've included screenshots to help guide users, but it would be much more convenient to bypass the first page altogether and have the Nudge button take users as far as possible to minimize mistakes and support desk tickets.
 
 ## LIMITATIONS
-At the moment, this workflow only works in Nudge Swift, as I have not yet been able to find a way to get Nudge Python to invoke the launcher app. The AppleScript logic itself is tested in 10.15.7, so this may eventually be supported.
+At the moment, this workflow only works in Nudge Swift, as I have not yet been able to find a way to get Nudge Python to invoke the launcher app. As of May 2023, the "More Info" button in macOS Ventura 13.3.1 does not have a valid AppleScript target, and cannot be clicked - for the time being, the script can only click on the main button (Install Now, Restart Now) until Apple fixes this. The button target can be found, but sending click commands to it yields no action. 
 
 ## VERSIONS
 
-**Loading Available Updates.scpt**
+**Show Update.scpt**
 
   • Original build
 
   • Opens the Systems Preferences app, clicks "More Info"
   
-  • Temporarily out of date and does not reflect macOS Ventura compatibility. This will be updated at some point.
+  • Note that in macOS Ventura, the "Update Now" button will be clicked and the user must take over at the EULA. This behavior will be modified once Apple fixes (or doesn't fix) the target for the "More Info" button in macOS Ventura.
 
 
-**Loading Available Updates_v2.scpt**
+**Launch Update.scpt**
   
-  • Opens the System Preferences app, clicks "More Info", then "Install", then approves the EULA prompt
+  • Opens the System Preferences app, clicks "More Info", then "Install", then approves the EULA prompt. Action ceases at the user authentication prompt.
   
   • This represents a true "one click" workflow from Nudge, but may not be appropriate for all environments
 
@@ -46,7 +46,7 @@ You'll need to define a path using the `file` URI that points at your app. Pleas
 
 ### 1. Create your AppleScript
 
-In Script Editor on your device, [paste this code](https://github.com/xirianlight/openToMoreInfo/blob/main/Loading%20Available%20Updates.scpt)
+In Script Editor on your device, paste the code for whichever action you want to use (Show Update vs Launch Update)
 
 Select File → Export
 
