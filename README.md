@@ -8,7 +8,7 @@ With some additional components, it is possible to have users click on the "Upda
 Many users in our environment complain of confusion when running Nudge, because of Apple's placement of macOS upgrade banners. Instructing users to look for a smaller "More Info" button, of which there can be two thanks to the upgrade banner, is cumbersome. We've included screenshots to help guide users, but it would be much more convenient to bypass the first page altogether and have the Nudge button take users as far as possible to minimize mistakes and support desk tickets.
 
 ## LIMITATIONS
-At the moment, this workflow only works in Nudge Swift, as I have not yet been able to find a way to get Nudge Python to invoke the launcher app. As of May 2023, the "More Info" button in macOS Ventura 13.3.1 does not have a valid AppleScript target, and cannot be clicked - for the time being, the script can only click on the main button (Install Now, Restart Now) until Apple fixes this. The button target can be found, but sending click commands to it yields no action. 
+At the moment, this workflow only works in Nudge Swift, as I have not yet been able to find a way to get Nudge Python to invoke the launcher app. As of September 2023, the "More Info" button in macOS Ventura does not have a valid AppleScript target, and cannot be clicked - for the time being, the script can only click on the main button (Install Now, Restart Now) until Apple fixes this. This means that users will be presented with either a credentials popup or the EULA. The button target can be found, but sending click commands to it yields no action. 
 
 ## VERSIONS
 
