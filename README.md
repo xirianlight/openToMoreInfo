@@ -8,7 +8,7 @@ With some additional components, it is possible to have users click on the "Upda
 Many users in our environment complain of confusion when running Nudge, because of Apple's placement of macOS upgrade banners. Instructing users to look for a smaller "More Info" button, of which there can be two thanks to the upgrade banner, is cumbersome. We've included screenshots to help guide users, but it would be much more convenient to bypass the first page altogether and have the Nudge button take users as far as possible to minimize mistakes and support desk tickets.
 
 ## LIMITATIONS
-At the moment, this workflow only works in Nudge Swift, as I have not yet been able to find a way to get Nudge Python to invoke the launcher app. As of September 2023, the "More Info" button in macOS Ventura does not have a valid AppleScript target, and cannot be clicked - for the time being, the script can only click on the main button (Install Now, Restart Now) until Apple fixes this. This means that users will be presented with either a credentials popup or the EULA. The button target can be found, but sending click commands to it yields no action. 
+At the moment, this workflow only works in Nudge Swift, as I have not yet been able to find a way to get Nudge Python to invoke the launcher app. As of September 2023, the "More Info" button in macOS Ventura (and macOS Sonoma) does not have a valid AppleScript target, and cannot be clicked - for the time being, the script can only click on the main button (Install Now, Restart Now) until Apple fixes this. This means that users will be presented with either a credentials popup or the EULA. The button target can be found, but sending click commands to it yields no action. Starting in October 2023, the "Launch Update" script now behaves very differently based on installed macOS version and device state - for details, see below
 
 ## VERSIONS
 
@@ -22,11 +22,31 @@ At the moment, this workflow only works in Nudge Swift, as I have not yet been a
 
 
 **Launch Update.scpt**
-  
-  • Opens the System Preferences app, clicks "More Info", then "Install", then approves the EULA prompt. Action ceases at the user authentication prompt.
-  
-  • This represents a true "one click" workflow from Nudge, but may not be appropriate for all environments
 
+  The script now behaves very differently in each operating system following Apple's abandonment of the "More Info..." button as an accessibility target.
+  
+  **macOS Big Sur & Monterey:**
+  
+  * Opens the System Preferences app to Software Update, clicks "More Info", then "Install", then approves the EULA prompt. Action ceases at the user authentication prompt.
+  
+  * This represents a true "one click" workflow from Nudge, but may not be appropriate for all environments
+
+  **macOS Ventura - macOS upgrade deferred**
+  
+  * Opens the System Settings app to Software Update, clicks the "Update Now" button, then approlves the EULA prompt. Action ceases at the user authentication prompt.
+
+  **macOS Ventura - macOS upgrade banner detected**
+  
+  * Scrolls to the bottom of the System Settings/Software Update window, and presents the user with a popup asking them to click the lower "More Info" button.
+
+  * Since Apple has still not made this button interactive again, this is the farthest we can take the user automatically.
+
+  **macOS Sonoma**
+  
+  * Opens the System Settings app to Software Update, clicks the "Update Now" button, then approlves the EULA prompt. Action ceases at the user authentication prompt.
+
+ * The logic can differentiate between whether or not there are two or three buttons present (Update Now & More Info; or Update Tonight, Restart Now, and More Info) and always target the button that will take action immediately.
+  
 ## COMPONENTS
 In order to make this function, a few items need to be in place:
 
